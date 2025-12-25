@@ -1,0 +1,42 @@
+Python Developer - Full Stack Position
+
+Company: Tech Innovations Inc.
+Location: Remote / Hybrid
+Type: Full-time
+
+Job Description:
+We are seeking an experienced Python Developer to join our dynamic engineering team. 
+You will be responsible for developing and maintaining scalable web applications and APIs.
+
+Key Responsibilities:
+- Design and develop Python-based web applications using Django or Flask
+- Build and maintain RESTful APIs
+- Work with databases (PostgreSQL preferred)
+- Collaborate with frontend developers
+- Write clean, maintainable, and well-documented code
+- Participate in code reviews and agile development processes
+
+Required Qualifications:
+- 3+ years of professional Python development experience
+- Strong experience with Django or Flask web frameworks
+- Proficiency in REST API development and design
+- Database experience: PostgreSQL, MySQL, or MongoDB
+- Version control with Git
+- Experience with cloud platforms (AWS preferred)
+- Strong problem-solving and debugging skills
+- Bachelor's degree in Computer Science or related field (or equivalent experience)
+
+Nice to Have:
+- Experience with Docker and containerization
+- Knowledge of CI/CD pipelines
+- Frontend experience (React, JavaScript, TypeScript)
+- Machine learning or data science experience
+- Experience with microservices architecture
+- Knowledge of Kubernetes
+
+What We Offer:
+- Competitive salary
+- Health insurance
+- Remote work options
+- Professional development opportunities
+

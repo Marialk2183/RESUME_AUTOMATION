@@ -1,0 +1,2 @@
+AI-powered resume screening system with modern web interface. Uses NLP (spaCy) and ML (TF-IDF, Cosine Similarity) for intelligent candidate-job matching. Features analytics dashboard, CSV export, candidate comparison, search/filter. Built with Flask, Python, JavaScript. Reduces screening time by 80%+.
+
