@@ -1,12 +1,5 @@
 {
-  "version": 2,
   "buildCommand": "pip install -r requirements-vercel.txt",
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
     {
       "src": "/static/(.*)",
@@ -22,6 +15,7 @@
   },
   "functions": {
     "api/index.py": {
+      "runtime": "@vercel/python",
       "maxDuration": 60,
       "memory": 3008
     }
