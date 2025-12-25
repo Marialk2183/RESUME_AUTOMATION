@@ -12,7 +12,6 @@ from pathlib import Path
 import json
 
 try:
-    import spacy
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.metrics.pairwise import cosine_similarity
     import PyPDF2
@@ -21,17 +20,27 @@ except ImportError:
     print("Please install required packages: pip install -r requirements.txt")
     raise
 
+# spaCy is optional - app works without it
+try:
+    import spacy
+    SPACY_AVAILABLE = True
+except ImportError:
+    SPACY_AVAILABLE = False
+    print("Note: spaCy not available. Using lightweight NLP features.")
+
 
 class ResumeParser:
     """Extracts structured information from resumes using NLP."""
     
     def __init__(self):
-        try:
-            # Load spaCy model (download if needed: python -m spacy download en_core_web_sm)
-            self.nlp = spacy.load("en_core_web_sm")
-        except OSError:
-            print("Warning: spaCy model not found. Using basic parsing.")
-            self.nlp = None
+        self.nlp = None
+        if SPACY_AVAILABLE:
+            try:
+                # Load spaCy model (download if needed: python -m spacy download en_core_web_sm)
+                self.nlp = spacy.load("en_core_web_sm")
+            except (OSError, ImportError):
+                # spaCy not available or model not found - use basic parsing
+                self.nlp = None
     
     def extract_text(self, file_path: str) -> str:
         """Extract text from PDF, DOCX, or TXT files."""

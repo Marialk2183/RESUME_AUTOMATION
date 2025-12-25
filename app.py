@@ -15,9 +15,10 @@ app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Configuration
-UPLOAD_FOLDER = 'uploads'
+# Use /tmp for Vercel (serverless) or 'uploads' for local development
+UPLOAD_FOLDER = '/tmp/uploads' if os.environ.get('VERCEL') else 'uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc', 'txt'}
-MAX_FILE_SIZE = 16 * 1024 * 1024  # 16MB
+MAX_FILE_SIZE = 4 * 1024 * 1024  # 4MB (Vercel limit is 4.5MB for serverless)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = MAX_FILE_SIZE

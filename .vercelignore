@@ -1,0 +1,41 @@
+# Vercel ignore file
+# Exclude unnecessary files from deployment
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation (optional - can include if you want)
+# *.md
+# !README.md
+
+# Sample/test files
+uploads/*
+!uploads/.gitkeep
+
+# Word documents (if any)
+*.docx
+*.doc
+
+# Temporary files
+*.tmp
+*.log
+
